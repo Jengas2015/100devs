@@ -1,0 +1,174 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+
+
+body {
+
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header * {
+  float: left;
+  height: 100px;
+}
+
+nav, .logo, .cta {
+  width: 33.33%;
+}
+
+nav li {
+  margin-left: 20px;
+  list-style: none;
+}
+
+header a {
+  color: white;
+}
+
+.cta a{
+  font-weight: bold;
+  height: 30px;
+  background: white;
+  color: #66768a;
+  padding: 7px 10px 0 10px;
+  margin-top: 7px;
+  border-radius: 5px;
+}
+
+.logo img {
+  padding-top: 10px;
+}
+
+main {
+  text-align: center;
+  background: #66768a;
+  color: white;
+}
+
+main p {
+  padding: 50px 500px;
+}
+
+.videoLink {
+  margin-top: 50px;
+}
+
+.placeholderIMG {
+  margin-top: 100px;
+  padding-bottom: 30px;
+}
+
+.missionStatement {
+  text-align: center;
+  padding: 150px 500px;
+}
+
+.features {
+  background: #dbdfe2;
+  text-align: center;
+  float: left;
+  padding-bottom: 50px;
+}
+
+.features >section {
+  float: left;
+  width: 50%;
+}
+
+.features p {
+  padding: 5px 180px;
+}
+
+.rectangle {
+  background: #66768a;
+  height: 200px;
+  width: 300px;
+  margin-left: auto;
+  transform: translateX(-80%);
+  margin-top: 100px;
+}
+
+.btn {
+  border: 1px solid black;
+  padding: 10px 30px;
+}
+
+.volunteer {
+  background: white;
+  text-align: center;
+  float: left;
+}
+
+.volunteer h2 {
+  padding-top: 100px;
+}
+
+.volunteer p {
+  padding: 0 500px;
+}
+
+.volunteer-btn {
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+
+footer {
+  background: #161f2a;
+  height: 200px;
+  width: 100%;
+  float: left;
+  color: white;
+  padding: 0 50px;
+}
+
+.footer-links {
+  height: 80%;
+  width: 50%;
+  float: left;
+}
+
+.footer-contacts {
+  height: 80%;
+  text-align: right;
+  width: 50%;
+  float: right;
+}
+
+.footer-copywrite {
+  height: 20%;
+  width: 100%;
+  float: left;
+  border-top: 1px solid white;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
