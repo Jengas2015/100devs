@@ -1,4 +1,6 @@
 let deckID = ''
+let localDeckID = localStorage.getItem("localDeckID")
+console.log(localDeckID)
 
 fetch("https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
 .then(res => res.json()) // parse response as JSON
@@ -14,11 +16,15 @@ document.querySelector('button').addEventListener('click', drawTwo)
 
 function drawTwo(){
 
-  const url = `https://www.deckofcardsapi.com/api/deck/${deckID}/draw/?count=2`
+  let url = `https://www.deckofcardsapi.com/api/deck/${localDeckID}/draw/?count=2`
 
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
+        remainingCards = data.remaining
+        if(remainingCards<=0) {
+          localStorage.setItem("localDeckID", deckID)
+        }
         console.log(data)
         document.querySelector('#player1').src=data.cards[0].image
         document.querySelector('#player2').src=data.cards[1].image
@@ -36,7 +42,7 @@ function drawTwo(){
 
       })
       .catch(err => {
-          console.log(`error ${err}`)
+          console.log(`error. Not enough cards`)
       });
 }
 
