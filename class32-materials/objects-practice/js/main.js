@@ -17,6 +17,7 @@ class Contractor {
     sayHello() {
         console.log(`Hello, my name is ${this._name}, and I am on the ${this._role} team at #100Devs!`)
     }
+
 }
 
 class FrontEnd extends Contractor {
